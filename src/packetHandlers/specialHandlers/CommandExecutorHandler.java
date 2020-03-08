@@ -1,10 +1,10 @@
-package packetHandlers.SpecialHandlers;
+package packetHandlers.specialHandlers;
 
 import org.openbakery.jinsim.PacketType;
 import org.openbakery.jinsim.response.InSimResponse;
 
-import Main.InSimWrapper;
 import extensions.AdminCommandReport;
+import main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
 /**

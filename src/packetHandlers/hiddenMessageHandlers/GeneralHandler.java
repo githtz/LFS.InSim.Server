@@ -3,7 +3,7 @@ package packetHandlers.hiddenMessageHandlers;
 import org.openbakery.jinsim.response.HiddenMessageResponse;
 import org.openbakery.jinsim.response.InSimResponse;
 
-import Main.InSimWrapper;
+import main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
 /**

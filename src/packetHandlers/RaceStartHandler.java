@@ -5,7 +5,7 @@ import org.openbakery.jinsim.request.TinyRequest;
 import org.openbakery.jinsim.response.InSimResponse;
 import org.openbakery.jinsim.response.RaceStartResponse;
 
-import Main.InSimWrapper;
+import main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
 public class RaceStartHandler implements packetHandler

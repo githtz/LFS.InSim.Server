@@ -3,8 +3,8 @@ package packetHandlers;
 import org.openbakery.jinsim.response.InSimResponse;
 import org.openbakery.jinsim.response.PlayerLeavingResponse;
 
-import Main.InSimWrapper;
-import Main.Player;
+import main.InSimWrapper;
+import main.Player;
 import packetInterfaces.packetHandler;
 
 public class PlayerLeaveRaceHandler implements packetHandler

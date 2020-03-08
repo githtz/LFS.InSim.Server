@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.openbakery.jinsim.response.ButtonClickedResponse;
 import org.openbakery.jinsim.response.InSimResponse;
 
-import Main.InSimWrapper;
+import main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
 /**

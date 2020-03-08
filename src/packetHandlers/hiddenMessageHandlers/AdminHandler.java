@@ -3,10 +3,10 @@ package packetHandlers.hiddenMessageHandlers;
 import org.openbakery.jinsim.response.HiddenMessageResponse;
 import org.openbakery.jinsim.response.InSimResponse;
 
-import Main.InSimWrapper;
-import Main.Main;
-import Routines.DirectionControl.Direction;
+import main.InSimWrapper;
+import main.Main;
 import packetInterfaces.packetHandler;
+import routines.DirectionControl.Direction;
 
 /**
  * @version 1.0

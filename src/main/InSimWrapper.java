@@ -1,4 +1,4 @@
-package Main;
+package main;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
@@ -13,11 +13,11 @@ import org.openbakery.jinsim.request.TinyRequest;
 import org.openbakery.jinsim.response.InSimListener;
 import org.openbakery.jinsim.response.InSimResponse;
 
-import ChatAddons.SwearWordPrevention;
-import Routines.DirectionControl;
-import Routines.DirectionControl.Direction;
+import chatAddons.SwearWordPrevention;
 import extensions.MessageToConnectionRequestEx;
 import packetInterfaces.packetHandler;
+import routines.DirectionControl;
+import routines.DirectionControl.Direction;
 
 public class InSimWrapper implements InSimListener
 {

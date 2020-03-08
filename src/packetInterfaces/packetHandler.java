@@ -2,7 +2,7 @@ package packetInterfaces;
 
 import org.openbakery.jinsim.response.InSimResponse;
 
-import Main.*;
+import main.*;
 
 public interface packetHandler
 {

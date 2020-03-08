@@ -3,7 +3,7 @@ package packetHandlers;
 import org.openbakery.jinsim.response.ConnectionPlayerRenameResponse;
 import org.openbakery.jinsim.response.InSimResponse;
 
-import Main.InSimWrapper;
+import main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
 /**

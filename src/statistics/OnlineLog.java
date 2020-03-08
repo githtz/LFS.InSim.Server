@@ -1,4 +1,4 @@
-package statistic;
+package statistics;
 
 import java.util.ArrayList;
 import java.util.Date;

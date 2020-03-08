@@ -6,10 +6,10 @@ import org.openbakery.jinsim.response.InSimResponse;
 import org.openbakery.jinsim.response.MultiCarInfoResponse;
 import org.openbakery.jinsim.types.CompCar;
 
-import Main.InSimWrapper;
-import Main.Player;
-import Routines.DirectionControl.Direction;
+import main.InSimWrapper;
+import main.Player;
 import packetInterfaces.packetHandler;
+import routines.DirectionControl.Direction;
 
 public class PlayerMovementPacketHandler implements packetHandler
 {

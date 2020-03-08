@@ -1,4 +1,4 @@
-package ChatAddons;
+package chatAddons;
 
 
 

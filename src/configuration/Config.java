@@ -1,4 +1,4 @@
-package Configuration;
+package configuration;
 
 /**
  * @version 1.0

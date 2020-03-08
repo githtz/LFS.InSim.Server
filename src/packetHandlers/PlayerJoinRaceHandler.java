@@ -3,10 +3,10 @@ package packetHandlers;
 import org.openbakery.jinsim.response.InSimResponse;
 import org.openbakery.jinsim.response.NewPlayerResponse;
 
-import Main.InSimWrapper;
-import Main.Player;
-import Routines.DirectionControl.Direction;
+import main.InSimWrapper;
+import main.Player;
 import packetInterfaces.packetHandler;
+import routines.DirectionControl.Direction;
 
 public class PlayerJoinRaceHandler implements packetHandler
 {

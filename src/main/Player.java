@@ -1,9 +1,9 @@
-package Main;
+package main;
 
 import java.util.Date;
 
-import Routines.DirectionControl;
-import Routines.DirectionControl.Direction;
+import routines.DirectionControl;
+import routines.DirectionControl.Direction;
 
 /**
  * Represents a Player

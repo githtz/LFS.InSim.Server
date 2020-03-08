@@ -1,4 +1,4 @@
-package Main;
+package main;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -8,8 +8,7 @@ import org.openbakery.jinsim.Tiny;
 import org.openbakery.jinsim.UDPChannel;
 import org.openbakery.jinsim.request.TinyRequest;
 
-import Configuration.Config;
-import Routines.DirectionControl.Direction;
+import configuration.Config;
 import packetHandlers.ButtonClickHandler;
 import packetHandlers.ButtonRemoveHandler;
 import packetHandlers.ButtonTextResponse;
@@ -22,11 +21,12 @@ import packetHandlers.PlayerJoinRaceHandler;
 import packetHandlers.PlayerLeaveRaceHandler;
 import packetHandlers.PlayerMovementPacketHandler;
 import packetHandlers.PlayerPitlaneHandler;
-import packetHandlers.SpecialHandlers.CommandExecutorHandler;
 import packetHandlers.hiddenMessageHandlers.AdminHandler;
 import packetHandlers.hiddenMessageHandlers.GeneralHandler;
 import packetHandlers.hiddenMessageHandlers.TeamHandler;
+import packetHandlers.specialHandlers.CommandExecutorHandler;
 import packetInterfaces.packetHandler;
+import routines.DirectionControl.Direction;
 
 public class Main
 {	

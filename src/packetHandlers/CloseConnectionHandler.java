@@ -3,8 +3,8 @@ package packetHandlers;
 import org.openbakery.jinsim.response.ConnectionLeaveResponse;
 import org.openbakery.jinsim.response.InSimResponse;
 
-import Main.InSimWrapper;
-import Main.Player;
+import main.InSimWrapper;
+import main.Player;
 import packetInterfaces.packetHandler;
 
 /**
