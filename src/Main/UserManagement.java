@@ -5,8 +5,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.management.RuntimeErrorException;
-
 /**
  * This class is used to manage the users that connect to our hosts
  * <br/>It creates users, checks their permissions and stores relevant data
@@ -660,7 +658,6 @@ public class UserManagement
 	 */
 	public short getOUCIDofUser(String userName)
 	{
-		userName = userName;
 		int size = this.users.size();
 		User temp = null;
 		for (int i = 0; i < size; i++)

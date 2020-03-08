@@ -3,8 +3,6 @@ package ChatAddons;
 
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -33,7 +31,7 @@ public class SwearWordPrevention
 	// Ok, just as you know we need the ArrayList
 	private ArrayList<bPlayer> bPlayers;
 	
-	private static ArrayList<String> bWords;
+	private ArrayList<String> bWords;
 	
 	// Now the constructor. This function gets called when you CREATE AN OBJECT
 	// of this class

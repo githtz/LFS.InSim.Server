@@ -9,8 +9,6 @@ import java.util.ArrayList;
 public class CrossChat
 {
 	private ArrayList<InSimWrapper> wrappers;
-	private UserManagement userManager;
-	
 	/**
 	 * Stores the one and only instance of the CrossChat
 	 */
@@ -33,7 +31,7 @@ public class CrossChat
 	private CrossChat()
 	{
 		this.wrappers = new ArrayList<InSimWrapper>();
-		this.userManager = UserManagement.CreateUsermanagement();
+		UserManagement.CreateUsermanagement();
 	}
 	
 	/**
@@ -112,7 +110,7 @@ public class CrossChat
 					this.wrappers.get(data[0]).sendMessage(data[1], receiver_message);
 				}
 				else
-					this.wrappers.get(insimID).sendMessage(UCID, "^1ID ^7" + data[1] + "^1could not be found!");
+					this.wrappers.get(insimID).sendMessage(UCID, "^1ID could not be found!");
 			}
 		}
 		else

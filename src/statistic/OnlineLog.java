@@ -1,7 +1,7 @@
 package statistic;
 
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class OnlineLog
 {
@@ -33,7 +33,6 @@ public class OnlineLog
 		Date now = new Date();
 		synchronized (players)
 		{
-			int size = players.size();
 			PlayerAccount player = find(accountName);
 			
 			if (player == null)
@@ -52,7 +51,6 @@ public class OnlineLog
 		Date now = new Date();
 		synchronized (players)
 		{
-			int size = players.size();
 			PlayerAccount player = find(accountName);
 			if (player == null)
 			{
