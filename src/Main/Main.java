@@ -1,44 +1,31 @@
 package Main;
 import java.io.IOException;
-import java.rmi.server.ServerCloneException;
 import java.util.Scanner;
 
-import Configuration.*;
+import Configuration.Config;
 import Routines.DirectionControl.Direction;
-
-import statistic.OnlineLog;
-import statistic.OnlineLogWrapper;
-
 import net.sf.jinsim.Channel;
 import net.sf.jinsim.SimpleClient;
-import net.sf.jinsim.Small;
 import net.sf.jinsim.Tiny;
 import net.sf.jinsim.UDPChannel;
-import net.sf.jinsim.request.MessageExtendedRequest;
-import net.sf.jinsim.request.MessageRequest;
-import net.sf.jinsim.request.SmallRequest;
 import net.sf.jinsim.request.TinyRequest;
-import net.sf.jinsim.request.SmallRequest;
-import net.sf.jinsim.response.InSimResponse;
 import packetHandlers.ButtonClickHandler;
 import packetHandlers.ButtonRemoveHandler;
 import packetHandlers.ButtonTextResponse;
 import packetHandlers.CloseConnectionHandler;
 import packetHandlers.ConnectionRenameHandler;
-import packetHandlers.PlayerMovementPacketHandler;
 import packetHandlers.MessageHandler;
-import packetHandlers.RaceStartHandler;
 import packetHandlers.NewConnectionHandler;
 import packetHandlers.PlayerCarTakeoverHandler;
 import packetHandlers.PlayerJoinRaceHandler;
 import packetHandlers.PlayerLeaveRaceHandler;
-import packetHandlers.PlayerPitHandler;
+import packetHandlers.PlayerMovementPacketHandler;
 import packetHandlers.PlayerPitlaneHandler;
 import packetHandlers.SpecialHandlers.CommandExecutorHandler;
 import packetHandlers.hiddenMessageHandlers.AdminHandler;
 import packetHandlers.hiddenMessageHandlers.GeneralHandler;
 import packetHandlers.hiddenMessageHandlers.TeamHandler;
-import packetInterfaces.*;
+import packetInterfaces.packetHandler;
 
 public class Main
 {	
@@ -47,7 +34,7 @@ public class Main
 	 *  for example ip, port and password of the server you want to use
 	 *  this software on. 
 	 */
-	public static final Config config = new XiledConfig();//ServerConfig or LocalConfig
+	public static final Config config = null;//ServerConfig or LocalConfig
 
 	
 	public static void main(String[] args) throws IOException
