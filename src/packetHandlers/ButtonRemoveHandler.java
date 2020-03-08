@@ -1,7 +1,8 @@
 package packetHandlers;
 
-import net.sf.jinsim.response.InSimResponse;
-import net.sf.jinsim.response.ButtonFunctionResponse;
+import org.openbakery.jinsim.response.ButtonFunctionResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
@@ -14,7 +15,6 @@ import packetInterfaces.packetHandler;
 public class ButtonRemoveHandler implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof ButtonFunctionResponse)

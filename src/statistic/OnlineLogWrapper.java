@@ -1,10 +1,7 @@
 package statistic;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Date;
 
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
@@ -16,8 +13,6 @@ public class OnlineLogWrapper
 	private static final String savepath = "C:\\Users\\anrc\\Desktop\\online_log.xml";
 	private OnlineLog log;
 	private static OnlineLogWrapper wrapper = null;
-	private long lastSave;
-	
 	public static OnlineLogWrapper getWrapper()
 	{
 		if (OnlineLogWrapper.wrapper == null)
@@ -35,7 +30,6 @@ public class OnlineLogWrapper
 	private OnlineLog load()
 	{
 		OnlineLog log = new OnlineLog();
-		FileInputStream istr;
 		try
 		{
 
@@ -70,7 +64,6 @@ public class OnlineLogWrapper
 	
 	private void save(OnlineLog save)
 	{
-		FileOutputStream ostr;
 		try
 		{
 			synchronized (save)

@@ -2,9 +2,10 @@ package packetHandlers;
 
 import java.io.IOException;
 
-import net.sf.jinsim.request.ButtonRequest;
-import net.sf.jinsim.response.InSimResponse;
-import net.sf.jinsim.response.NewConnectionResponse;
+import org.openbakery.jinsim.request.ButtonRequest;
+import org.openbakery.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.NewConnectionResponse;
+
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
@@ -17,7 +18,6 @@ import packetInterfaces.packetHandler;
  */
 public class NewConnectionHandler implements packetHandler
 {
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof NewConnectionResponse)
@@ -40,7 +40,7 @@ public class NewConnectionHandler implements packetHandler
 			
 			wrapper.sendMessage(UCID, " ");
 			wrapper.sendMessage(UCID, " ");
-			//wrapper.sendMessage(UCID, "^3Welcome to the ^7Tofu[^1•^7] servers, " + playername);
+			//wrapper.sendMessage(UCID, "^3Welcome to the ^7Tofu[^1ï¿½^7] servers, " + playername);
 			wrapper.sendMessage(UCID, "^3Wecome to the ^7Curb<^1*^7> servers, " + playername);
 			if (member)
 				wrapper.sendMessage(UCID, "^1You are logged in as ^6member^1.");
@@ -57,7 +57,7 @@ public class NewConnectionHandler implements packetHandler
 			if (InSimWrapper.containsCurb(playername) && !member)
 			{
 				wrapper.sendCommand(playername + " (" + username + ") ^1was auto-kicked for faking!");
-				//wrapper.sendMessage(UCID, "^1You are not a Tofu member! Remove \"^7Tofu[^1•^7]^1\" from your name!");
+				//wrapper.sendMessage(UCID, "^1You are not a Tofu member! Remove \"^7Tofu[^1ï¿½^7]^1\" from your name!");
 				wrapper.sendMessage(UCID, "^1You are not a Curb member! Remove \"^7Curb<^1*^7>\" from your name!");
 				wrapper.sendCommand("/kick " + username);
 			}
@@ -102,7 +102,7 @@ public class NewConnectionHandler implements packetHandler
 			String line9 = 
 				"^6>>> ^7Visit our page for ^1the last ^7news: ^1http://tofu-project.web44.net ^6<<<";
 			String line10 =
-				"Thank you for everything," + /*" ^7Tofu[^1•^7]-Team.";* " ^7Tofu[^1•^7]soujir^6º";
+				"Thank you for everything," + /*" ^7Tofu[^1ï¿½^7]-Team.";* " ^7Tofu[^1ï¿½^7]soujir^6ï¿½";
 			*/
 			
 			String line1 = 

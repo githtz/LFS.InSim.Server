@@ -1,7 +1,8 @@
 package packetHandlers;
 
-import net.sf.jinsim.response.InSimResponse;
-import net.sf.jinsim.response.MessageResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.MessageResponse;
+
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
@@ -14,7 +15,6 @@ import packetInterfaces.packetHandler;
 public class MessageHandler implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof MessageResponse)

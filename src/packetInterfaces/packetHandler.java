@@ -1,6 +1,7 @@
 package packetInterfaces;
 
-import net.sf.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+
 import Main.*;
 
 public interface packetHandler

@@ -1,11 +1,8 @@
-package net.sf.jinsim.request;
+package org.openbakery.jinsim.request;
 
 import java.nio.ByteBuffer;
 
-import net.sf.jinsim.PacketType;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.openbakery.jinsim.PacketType;
 
 public class ButtonRequest extends InSimRequest {
 

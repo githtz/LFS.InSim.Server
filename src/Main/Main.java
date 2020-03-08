@@ -2,13 +2,14 @@ package Main;
 import java.io.IOException;
 import java.util.Scanner;
 
+import org.openbakery.jinsim.Channel;
+import org.openbakery.jinsim.SimpleClient;
+import org.openbakery.jinsim.Tiny;
+import org.openbakery.jinsim.UDPChannel;
+import org.openbakery.jinsim.request.TinyRequest;
+
 import Configuration.Config;
 import Routines.DirectionControl.Direction;
-import net.sf.jinsim.Channel;
-import net.sf.jinsim.SimpleClient;
-import net.sf.jinsim.Tiny;
-import net.sf.jinsim.UDPChannel;
-import net.sf.jinsim.request.TinyRequest;
 import packetHandlers.ButtonClickHandler;
 import packetHandlers.ButtonRemoveHandler;
 import packetHandlers.ButtonTextResponse;
@@ -192,7 +193,6 @@ class ConnectionRefresher implements Runnable
 		this.clients = clients;
 	}
 	
-	@Override
 	public void run()
 	{
 			while (true)

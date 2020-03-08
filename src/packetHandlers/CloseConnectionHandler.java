@@ -1,7 +1,8 @@
 package packetHandlers;
 
-import net.sf.jinsim.response.ConnectionLeaveResponse;
-import net.sf.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.ConnectionLeaveResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+
 import Main.InSimWrapper;
 import Main.Player;
 import packetInterfaces.packetHandler;
@@ -14,7 +15,6 @@ import packetInterfaces.packetHandler;
 public class CloseConnectionHandler implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof ConnectionLeaveResponse)

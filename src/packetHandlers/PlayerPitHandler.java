@@ -1,7 +1,8 @@
 package packetHandlers;
 
-import net.sf.jinsim.response.InSimResponse;
-import net.sf.jinsim.response.PlayerPitsResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.PlayerPitsResponse;
+
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
@@ -13,7 +14,6 @@ import packetInterfaces.packetHandler;
 public class PlayerPitHandler implements packetHandler 
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof PlayerPitsResponse)

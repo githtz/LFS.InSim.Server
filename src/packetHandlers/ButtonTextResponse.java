@@ -2,8 +2,9 @@ package packetHandlers;
 
 import java.util.ArrayList;
 
-import net.sf.jinsim.response.ButtonTypeResponse;
-import net.sf.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.ButtonTypeResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
@@ -16,7 +17,6 @@ import packetInterfaces.packetHandler;
 public class ButtonTextResponse implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof ButtonTypeResponse)

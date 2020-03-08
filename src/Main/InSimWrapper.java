@@ -1,30 +1,23 @@
 package Main;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import packetInterfaces.packetHandler;
+import org.openbakery.jinsim.SimpleClient;
+import org.openbakery.jinsim.request.ButtonFunctionRequest;
+import org.openbakery.jinsim.request.ButtonRequest;
+import org.openbakery.jinsim.request.ButtonSubtype;
+import org.openbakery.jinsim.request.MessageRequest;
+import org.openbakery.jinsim.request.TinyRequest;
+import org.openbakery.jinsim.response.InSimListener;
+import org.openbakery.jinsim.response.InSimResponse;
 
 import ChatAddons.SwearWordPrevention;
 import Routines.DirectionControl;
 import Routines.DirectionControl.Direction;
-
 import extensions.MessageToConnectionRequestEx;
-
-import net.sf.jinsim.SimpleClient;
-import net.sf.jinsim.Tiny;
-import net.sf.jinsim.request.ButtonFunctionRequest;
-import net.sf.jinsim.request.ButtonRequest;
-import net.sf.jinsim.request.ButtonSubtype;
-import net.sf.jinsim.request.InSimRequest;
-import net.sf.jinsim.request.MessageRequest;
-import net.sf.jinsim.request.TinyRequest;
-import net.sf.jinsim.response.InSimListener;
-import net.sf.jinsim.response.InSimResponse;
+import packetInterfaces.packetHandler;
 
 public class InSimWrapper implements InSimListener
 {
@@ -35,9 +28,9 @@ public class InSimWrapper implements InSimListener
 	public static int counter = 0;
 	public SimpleClient client;
 	public String hostname;
-	public final String wrongWay = "^1=== ^7Please drive ^1REVERSE^7! ^1==››";
-	public final String normalWay = "^6‹‹== ^7Please drive ^6NORMAL^7! ^6===";
-	public final String cruise = "^6‹‹== ^7Cruise allowed! ^1==››";
+	public final String wrongWay = "^1=== ^7Please drive ^1REVERSE^7! ^1==ï¿½ï¿½";
+	public final String normalWay = "^6ï¿½ï¿½== ^7Please drive ^6NORMAL^7! ^6===";
+	public final String cruise = "^6ï¿½ï¿½== ^7Cruise allowed! ^1==ï¿½ï¿½";
 	
 	/*
 	 * The ID's used here are for all pre-defined Buttons created.
@@ -168,8 +161,8 @@ public class InSimWrapper implements InSimListener
 		playerName = "";
 		for (int i = 0; i < split.length; i++)
 			playerName += split[i];
-		if (playerName.matches("t.f.\\[•\\].*"))
-		//if (playerName.contains( "Tofu[•]".toLowerCase()) || playerName.contains( ("T"+ (char)959 + "fu[•]").toLowerCase()) || playerName.contains( ("T"+ (char)1086 + "fu[•]").toLowerCase()) )
+		if (playerName.matches("t.f.\\[ï¿½\\].*"))
+		//if (playerName.contains( "Tofu[ï¿½]".toLowerCase()) || playerName.contains( ("T"+ (char)959 + "fu[ï¿½]").toLowerCase()) || playerName.contains( ("T"+ (char)1086 + "fu[ï¿½]").toLowerCase()) )
 			return true;
 		else 
 		{
@@ -194,10 +187,9 @@ public class InSimWrapper implements InSimListener
 	/**
 	 * Will be executed when the client receives a packet
 	 */
-	@Override
-	public void packetReceived(InSimResponse packet)
+	public void packetReceived(InSimResponse response)
 	{
-		service.execute(new runner(packet, this));
+		service.execute(new runner(response, this));
 		/*
 		long now = new Date().getTime();
 		
@@ -402,7 +394,6 @@ class runner implements Runnable
 		this.packet = packet;
 	}
 	
-	@Override
 	public void run()
 	{
 		for(int i = 0; i < InSimWrapper.handlers.length; i++)
@@ -444,7 +435,7 @@ class runner implements Runnable
 //			
 //			this.sendMessage(UCID, " ");
 //			this.sendMessage(UCID, " ");
-//			this.sendMessage(UCID, "^3Welcome to the ^7Tofu[^1•^7] servers, " + playername);
+//			this.sendMessage(UCID, "^3Welcome to the ^7Tofu[^1ï¿½^7] servers, " + playername);
 //			if (member)
 //				this.sendMessage(UCID, "^1You are logged in as ^6member^1.");
 //			else
@@ -457,7 +448,7 @@ class runner implements Runnable
 //			if (containsTofu(playername) && !member)
 //			{
 //				sendCommand(playername + " (" + username + ") ^1was auto-kicked for faking!");
-//				sendMessage(UCID, "^1You are not a Tofu member! Remove \"^7Tofu[^1•^7]^1\" from your name!");
+//				sendMessage(UCID, "^1You are not a Tofu member! Remove \"^7Tofu[^1ï¿½^7]^1\" from your name!");
 //				sendCommand("/kick " + username);
 //			}
 //			
@@ -564,7 +555,7 @@ class runner implements Runnable
 //			if (containsTofu(playerName) && !isMember)
 //			{
 //				sendCommand(playerName + " (" + userName + ") ^1was auto-kicked for faking!");
-//				sendMessage(UCID, "^1You are not a Tofu member! Remove '^7Tofu[^1•^7] ^1from your name!");
+//				sendMessage(UCID, "^1You are not a Tofu member! Remove '^7Tofu[^1ï¿½^7] ^1from your name!");
 //				sendCommand("/kick " + userName);
 //			}
 //			

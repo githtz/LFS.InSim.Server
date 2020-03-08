@@ -1,16 +1,15 @@
-package net.sf.jinsim;
+package org.openbakery.jinsim;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-import net.sf.jinsim.request.InSimRequest;
-import net.sf.jinsim.request.TinyRequest;
-import net.sf.jinsim.response.ConnectionCloseResponse;
-import net.sf.jinsim.response.InSimResponse;
-import net.sf.jinsim.response.ResponseFactory;
-import net.sf.jinsim.response.UnhandledPacketTypeException;
-
+import org.openbakery.jinsim.request.InSimRequest;
+import org.openbakery.jinsim.request.TinyRequest;
+import org.openbakery.jinsim.response.ConnectionCloseResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.ResponseFactory;
+import org.openbakery.jinsim.response.UnhandledPacketTypeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -137,19 +136,19 @@ public abstract class AbstractChannel implements Channel {
 		packet.assemble(sendBuffer);
 		sendBuffer.flip();
 
-		int size = packet.getSize();
-		/*if (log.isDebugEnabled()) {
-			byte[] bytes = new byte[size];
-			sendBuffer.get(bytes);
-			sendBuffer.flip();
-			if (log.isDebugEnabled()) {
-				String message = ("SEND: bytes in " + packet.getType() + " buffer: [");
-				for (int i = 0; i < size; i++) {
-					message += (bytes[i] + ", ");
-				}
-				log.debug(message + "]");
-			}
-		}*/
+//		int size = packet.getSize();
+//		if (log.isDebugEnabled()) {
+//			byte[] bytes = new byte[size];
+//			sendBuffer.get(bytes);
+//			sendBuffer.flip();
+//			if (log.isDebugEnabled()) {
+//				String message = ("SEND: bytes in " + packet.getType() + " buffer: [");
+//				for (int i = 0; i < size; i++) {
+//					message += (bytes[i] + ", ");
+//				}
+//				log.debug(message + "]");
+//			}
+//		}
 		send(sendBuffer);
 	}
 

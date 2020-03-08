@@ -3,9 +3,9 @@ package extensions;
 import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 
-import net.sf.jinsim.Encoding;
-import net.sf.jinsim.PacketType;
-import net.sf.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.Encoding;
+import org.openbakery.jinsim.PacketType;
+import org.openbakery.jinsim.response.InSimResponse;
 
 /**
  * @version 1.0

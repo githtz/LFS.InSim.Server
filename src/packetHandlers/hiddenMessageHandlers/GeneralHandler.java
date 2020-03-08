@@ -1,11 +1,8 @@
 package packetHandlers.hiddenMessageHandlers;
 
-import java.io.IOException;
-import java.util.ArrayList;
+import org.openbakery.jinsim.response.HiddenMessageResponse;
+import org.openbakery.jinsim.response.InSimResponse;
 
-import net.sf.jinsim.request.ButtonRequest;
-import net.sf.jinsim.response.HiddenMessageResponse;
-import net.sf.jinsim.response.InSimResponse;
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
@@ -17,7 +14,6 @@ import packetInterfaces.packetHandler;
 public class GeneralHandler implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof HiddenMessageResponse)

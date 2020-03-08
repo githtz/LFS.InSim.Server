@@ -1,7 +1,8 @@
 package packetHandlers;
 
-import net.sf.jinsim.response.ConnectionPlayerRenameResponse;
-import net.sf.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.ConnectionPlayerRenameResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
 
@@ -13,7 +14,6 @@ import packetInterfaces.packetHandler;
 public class ConnectionRenameHandler implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof ConnectionPlayerRenameResponse)
@@ -37,7 +37,7 @@ public class ConnectionRenameHandler implements packetHandler
 			/*if (InSimWrapper.containsTofu(playerName) && !isMember)
 			{
 				wrapper.sendCommand(playerName + " (" + userName + ") ^1was auto-kicked for faking!");
-				wrapper.sendMessage(UCID, "^1You are not a Tofu member! Remove '^7Tofu[^1•^7] ^1from your name!");
+				wrapper.sendMessage(UCID, "^1You are not a Tofu member! Remove '^7Tofu[^1ï¿½^7] ^1from your name!");
 				wrapper.sendCommand("/kick " + userName);
 			}*/
 			if (InSimWrapper.containsCurb(playerName) && !isMember)

@@ -1,14 +1,12 @@
 package packetHandlers;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
-import net.sf.jinsim.response.ButtonClickedResponse;
-import net.sf.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.ButtonClickedResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+
 import Main.InSimWrapper;
 import packetInterfaces.packetHandler;
-import net.sf.jinsim.request.ButtonFunctionRequest;
-import net.sf.jinsim.request.ButtonSubtype;
 
 /**
  * @version 1.0
@@ -17,8 +15,6 @@ import net.sf.jinsim.request.ButtonSubtype;
  */
 public class ButtonClickHandler implements packetHandler
 {
-
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof ButtonClickedResponse)

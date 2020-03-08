@@ -1,12 +1,11 @@
-package net.sf.jinsim.response;
+package org.openbakery.jinsim.response;
 
 import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 
-import net.sf.jinsim.PacketType;
-import net.sf.jinsim.response.relay.HostListResponse;
-
+import org.openbakery.jinsim.PacketType;
+import org.openbakery.jinsim.response.relay.HostListResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

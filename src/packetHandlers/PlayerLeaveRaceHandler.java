@@ -1,14 +1,14 @@
 package packetHandlers;
 
-import net.sf.jinsim.response.InSimResponse;
-import net.sf.jinsim.response.PlayerLeavingResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.PlayerLeavingResponse;
+
 import Main.InSimWrapper;
 import Main.Player;
 import packetInterfaces.packetHandler;
 
 public class PlayerLeaveRaceHandler implements packetHandler
 {
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof PlayerLeavingResponse)

@@ -1,7 +1,8 @@
 package packetHandlers;
 
-import net.sf.jinsim.response.InSimResponse;
-import net.sf.jinsim.response.TakeOverCarResponse;
+import org.openbakery.jinsim.response.InSimResponse;
+import org.openbakery.jinsim.response.TakeOverCarResponse;
+
 import Main.InSimWrapper;
 import Main.Player;
 import packetInterfaces.packetHandler;
@@ -9,7 +10,6 @@ import packetInterfaces.packetHandler;
 public class PlayerCarTakeoverHandler implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof TakeOverCarResponse)

@@ -1,13 +1,10 @@
 package packetHandlers.hiddenMessageHandlers;
 
-import java.io.IOException;
+import org.openbakery.jinsim.response.HiddenMessageResponse;
+import org.openbakery.jinsim.response.InSimResponse;
 
-import packetInterfaces.packetHandler;
-
-import net.sf.jinsim.request.ButtonRequest;
-import net.sf.jinsim.response.HiddenMessageResponse;
-import net.sf.jinsim.response.InSimResponse;
 import Main.InSimWrapper;
+import packetInterfaces.packetHandler;
 
 /**
  * @version 1.0
@@ -17,7 +14,6 @@ import Main.InSimWrapper;
 public class TeamHandler implements packetHandler
 {
 
-	@Override
 	public void handlePacket(InSimResponse packet, InSimWrapper wrapper)
 	{
 		if (packet instanceof HiddenMessageResponse)

@@ -2,8 +2,8 @@ package extensions;
 
 import java.nio.ByteBuffer;
 
-import net.sf.jinsim.PacketType;
-import net.sf.jinsim.request.InSimRequest;
+import org.openbakery.jinsim.PacketType;
+import org.openbakery.jinsim.request.InSimRequest;
 
 /**
  * @version 1.0
